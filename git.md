@@ -77,7 +77,7 @@ Si se requiere conocer el detalle de un archivo especifico se puede usar el coma
     git log -g --grep=STRING
 
 
-# Mantenimiento Servicio #
+# Mantenimiento del servicio GitLab #
 
 ##### Reniciar el servidor de Ubuntu #####
 Ya firmado en la consola de Ubuntu teclear:
