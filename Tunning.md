@@ -34,4 +34,14 @@ To find the queries that are causing spills, you can run the following query:
 	WHERE qp.query_plan.value(
              'declare namespace p="http://schemas.microsoft.com/sqlserver/2004/07/showplan";
              max(//p:SpillToTempDb/@SpillLevel)', 'int') > 0
-	```
+```
+
+# Tips #
+- Usar DBCCDBREINDEX para reconstruir todos los indices periodicamente, por ejemplo 1 vez por semana, esto para reducir la fragmentación de la base de datos
+
+- Seek usa un indice para hacer una búsqueda de forma mas eficiente
+
+- Scan hace un barrido de toda la tabla en busca de un registro
+
+- `tempdb` debería estar en un DD de alto rendimiento de I/O
+
