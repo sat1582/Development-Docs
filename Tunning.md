@@ -45,3 +45,5 @@ To find the queries that are causing spills, you can run the following query:
 
 - `tempdb` debería estar en un DD de alto rendimiento de I/O
 
+# Conversiones entre tipos #
+Evitar para una comparación entre columnas que el SQL en conjunto con el ORM realizen conversiones de **Nvarchar** a **Varchar** o viceversa, esta coversión resulta muy costosa para el sql. Esto es dificil de detectar sobre todo si esta conversión la realiza algun ORM.
